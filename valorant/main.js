@@ -143,8 +143,8 @@ function showChar() {
 
     charNum.innerHTML = charNumText;
     charName.innerHTML = name;
-    currChar.setAttribute('src', '/resources/images/characters/' + name + '.png');
-    charLine.setAttribute('src', '/resources/lines/' + name + '.mp3');
+    currChar.setAttribute('src', './resources/images/characters/' + name + '.png');
+    charLine.setAttribute('src', './resources/lines/' + name + '.mp3');
     charLine.play();
 
     name = (name === 'kay/o') ? 'kay-o' : name;
@@ -212,7 +212,7 @@ function prevCine() {
 
 function showCine() {
     cineLink.setAttribute('href', cine[currentCine].link);
-    cineCover.setAttribute('src', '/resources/images/cinematics/' + cine[currentCine].name + '.jpg');
+    cineCover.setAttribute('src', './resources/images/cinematics/' + cine[currentCine].name + '.jpg');
     cineButtons[preCine + 1].classList.remove('active');
     cineButtons[currentCine + 1].classList.add('active');
 }
@@ -297,7 +297,7 @@ function showMap() {
     mapNum.innerHTML = charNumText;
     mapName.innerHTML = name;
     mapDesc.innerHTML = maps[currMap].description;
-    mapCover.setAttribute('src', '/resources/images/maps/' + name + '.png');
+    mapCover.setAttribute('src', './resources/images/maps/' + name + '.png');
 }
 
 function isShown(el) {

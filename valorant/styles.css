@@ -100,12 +100,12 @@ header {
 
 @font-face {
     font-family: Valorant;
-    src: url('/resources/fonts/valorant/Valorant Font.ttf');
+    src: url('./resources/fonts/valorant/Valorant Font.ttf');
 }
 
 @font-face {
     font-family: Tungsten;
-    src: url('/resources/fonts/valorant/Tungsten Font.ttf');
+    src: url('./resources/fonts/valorant/Tungsten Font.ttf');
 }
 
 section {
@@ -317,7 +317,7 @@ button:active {
     color: #383e3a;
     margin: 0 0 2em -5%;
     overflow: hidden;
-    background: url(/resources//images/background/we-are-valorant.png);
+    background: url(./resources//images/background/we-are-valorant.png);
     width: 110%;
 }
 
@@ -470,7 +470,7 @@ button:active {
 }
 
 footer {
-    background: url('/resources/images/background/we-are-valorant.png');
+    background: url('./resources/images/background/we-are-valorant.png');
     display: flex;
     flex-direction: row;
     gap: 10em;
