@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{ display: none; }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    background-color: #0F1923;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    perspective: 100px;
+    scroll-behavior: smooth;
+}
+
+#beginning {
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    text-align: center;
+}
+
+#beginning h1 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 2em !important;
+    text-shadow: none !important;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+#beginning p {
+    margin: 1em auto !important;
+    color: rgba(255,255,255,0.75);
+}
+
+p#instruction {
+    animation: blink 1s ease 0s infinite;
+    color: white !important;
+    margin: 3em auto !important;
+    visibility: hidden;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    margin-top: 200vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+#background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateZ(-100px) scale(2);
+    z-index: -1;
+}
+
+#foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateZ(0) scale(1);
+    z-index: -1;
+}
+
+#title {
+    font-family: Valorant;
+    color: white;
+    font-size: 10rem;
+    z-index: 0;
+    position: relative;
+    transform: translate(0, -210%) translateZ(-50px) scale(1.5);
+    z-index: -1;
+}
+
+@font-face {
+    font-family: Valorant;
+    src: url('/resources/fonts/valorant/Valorant Font.ttf');
+}
+
+@font-face {
+    font-family: Tungsten;
+    src: url('/resources/fonts/valorant/Tungsten Font.ttf');
+}
+
+section {
+    background-color: #0F1923;
+    color: white;
+    position: absolute;
+    width: 100vw;
+    transform: translate(0, 0) translateZ(0px) scale(1);
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5em;
+}
+
+a {
+    color: #FF4654;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: solid 5px rgba(255, 70, 84, 0.5);
+}
+
+h1 a, h2 a {
+    color: #0F1923;
+    box-sizing: border-box;
+    border-bottom: solid 0.1em transparent;
+}
+
+h1:hover a, h2:hover a {
+    border-bottom: solid 0.1em #00FCCE;
+}
+
+h1 a:focus, h2 a:focus {
+    border-bottom: solid 0.1em #00FCCE;
+    outline: solid 5px rgba(0, 252, 206, 0.5);
+}
+
+#company {
+    margin: 10em 10em 5em 10em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    grid-template-rows: 50% 50%s;
+    gap: 10em;
+}
+
+#company div {
+    width: 50%;
+    align-content: center;
+
+}
+
+#company .description {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2em;
+}
+
+#company svg {
+    width: 300px;
+}
+
+#company .about {
+    text-align: left;
+}
+
+#company .about span {
+    text-align: right;
+    width: 100%;
+    display: block;
+}
+
+h1:not(#title),
+h2 {
+    color: #0F1923;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    font-family: Valorant;
+    font-size: 10rem;
+}
+
+h2 {
+    margin: -0.2em 0em 0.2em 0.5em;
+}
+
+#characters {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+#charSelection {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10em;
+    width: 100%;
+}
+
+#charText {
+    margin: 0px 10em;
+}
+
+#charButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+#charButtons button,
+button {
+    font-size: 1.5em;
+    background-color: transparent;
+    color: #FF4654;
+    border: solid 1px #FF4654;
+    padding: 1em;
+    margin: 1em 3em;
+    transition-duration: 0.25s;
+}
+
+button:active {
+    scale: 0.9;
+}
+
+
+#beginning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: white;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#beginning span {
+    border: solid 2px;
+    padding: 0.3em 0.8em;
+    margin: 0.5em;
+}
+
+#charButtons button:hover, button:hover {
+    background-color: #FF4654;
+    color: white;
+    cursor: pointer
+}
+
+#currChar {
+    margin: -4em 15em 4em -15em;
+    z-index: 2;
+    animation: anim 5s ease 0s infinite;
+}
+
+@keyframes anim {
+    0% {
+        margin: -4em 15em 4em -15em;
+    }
+
+    50% {
+        margin: -3em 15em 3em -15em;
+    }
+
+    100% {
+        margin: -4em 15em 4em -15em;
+    }
+}
+
+#charNum, #mapNum {
+    font-family: Tungsten, sans-serif;
+    font-size: 2em;
+    margin: 0px;
+    color: #FF4654;
+}
+
+#charName, #mapName {
+    font-family: Tungsten, sans-serif;
+    font-size: 10em;
+    text-transform: uppercase;
+    margin: -0.2em 0px 0em 0px;
+    color: white;
+    box-sizing: border-box;
+    border-bottom: solid 0.1em transparent;
+}
+
+#mapName {
+    margin: -0.35em 0px 0em 0px;
+    height: 1.2em;
+}
+
+#charName:hover {
+    border-bottom: solid 0.1em #00FCCE;
+}
+
+#charName:focus {
+    outline: solid 5px rgba(0, 252, 206, 0.5);
+}
+
+#characterInfo, #currMap {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    position: block;
+    justify-content: center;
+}
+
+#gameDesc {
+    padding: 5em;
+    transform: rotateZ(2deg);
+    background-color: #ece8e1;
+    color: #383e3a;
+    margin: 0 0 2em -5%;
+    overflow: hidden;
+    background: url(/resources//images/background/we-are-valorant.png);
+    width: 110%;
+}
+
+#gameDesc img {
+    height: 5em;
+    display: block;
+    margin: 0 auto 3em auto;
+}
+
+#gameDesc p {
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* #gameDesc h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight:900;
+    position: absolute;
+    color: #ece8e1;
+    text-shadow: -2px -2px 0 #dbd8d2, 2px -2px 0 #dbd8d2, -2px 2px 0 #dbd8d2, 2px 2px 0 #dbd8d2;
+    z-index: 1;
+    text-transform: uppercase;
+    line-height: 1em;
+} */
+
+#cinematics {
+    margin: 0px 10em;
+}
+
+#cineCover {
+    height: 30em;
+    display: block;
+    margin: 0px auto;
+}
+
+#cineSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cineButton {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    align-items: center;
+
+}
+
+#cineButton button:not(.controlCine) {
+    width: 2.5em;
+    height: 0.5em;
+    border: solid 1px transparent;
+    margin: 0 0 0 -1px;
+    display: inline-flex;
+    align-items: center;
+    padding:  0;
+    border: solid 1px #FF4654 !important;
+    transition-duration: 0.25s;
+}
+
+#cineButton button:not(.controlCine) p {
+    font-size: 1em;
+    font-family: Tungsten, sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+#cineButton buttonbutton:not(.controlCine):hover {
+    background-color: rgba(255, 70, 84, 0.5);
+}
+
+#cineButton button:not(.controlCine).active {
+    border: solid 1px #FF4654 !important;
+    background-color: #FF4654;
+}
+
+#cineButton button:not(.controlCine).active p {
+    color: white;
+}
+
+
+.controlCine {
+    font-size: 1em;
+    border: solid 1px #FF4654 !important;
+    margin: 1em 4em !important;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.controlCine svg {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.controlCine g {
+    fill: #FF4654;
+}
+
+.controlCine:hover {
+    background: #FF4654;
+}
+
+.controlCine:hover g {
+    fill: white;
+}
+
+#cineLink, #cineCover {
+    transition-duration: 0.25s;
+}
+
+#cineLink:active #cineCover {
+    opacity: 0.5;
+    scale: 1.1;
+}
+
+#maps {
+    margin: 0 10em 5em 10em;
+}
+
+#mapCover {
+    background: url('https://i.pinimg.com/originals/f8/42/6b/f8426bf4f6892dfed16b2e0f583d5670.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    rotate: -1deg;
+    border: solid 1em white;
+    height: 30em;
+    margin: 0 auto;
+}
+
+#mapSection {
+    display: flex;
+    flex-direction: row;
+}
+
+#mapSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+#mapDesc {
+    margin: 5em;
+    height: max-content;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    rotate: -1deg;
+}
+
+footer {
+    background: url('/resources/images/background/we-are-valorant.png');
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+    text-align: center;
+    padding: 5em;
+    align-items: center;
+}
+
+footer > div {
+    width: 50%;
+}
+
+footer h1 {
+    color: #383e3a !important;
+    text-shadow: none !important;
+    font-size: 5em !important;
+}
+
+#socialLink {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 10em;
+    justify-items: center;
+    column-gap: 5em;
+}
+
+footer a {
+    text-align: center;
+    color: #383e3a;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    font-size: 1.2em;
+    margin: 0.5em auto;
+    border-bottom: solid 0.2em transparent;
+    width: fit-content;
+}
+
+footer a:hover {
+    border-bottom: solid 0.2em #383e3a;
+}
+
+footer a:focus {
+    outline: solid 5px rgba(56, 62, 58, 0.5);
+}
+
+footer p {
+    text-align: center;
+    color: #383e3a;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ece8e1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 20px;
+    background-color: #383e3a;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-color: #0F1923;
+  }
+
+  @media only screen and (max-width: 1800px) {
+    #groupName {
+        display: none !important;
+    }
+
+    #cinematics {
+        margin: 0;
+    }
+
+    #mapSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mapDesc {
+        margin: 0 5em;
+        height: max-content;
+    font-family: 'Inter', sans-serif;
+        font-size: 1.5em;
+        rotate: -1deg;
+    }
+
+    /* #currChar {
+        margin: -4em 30em 4em -30em;
+        z-index: 2;
+        animation: anim 5s ease 0s infinite;
+    }
+
+    @keyframes anim {
+        0% {
+            margin: -4em 30em 4em -30em;
+        }
+    
+        50% {
+            margin: -3em 30em 3em -30em;
+        }
+    
+        100% {
+            margin: -4em 30em 4em -30em;
+        } */
+    /* } */
+
+    #charSelection {
+        margin: 0;
+    }
+}
